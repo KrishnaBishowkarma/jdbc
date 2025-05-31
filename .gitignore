@@ -1,0 +1,44 @@
+# ========================
+# Java and Compiled Files
+# ========================
+*.class
+*.jar
+*.war
+*.log
+
+# Maven / Gradle (if used)
+target/
+build/
+
+# ========================
+# IntelliJ IDEA
+# ========================
+.idea/
+*.iml
+out/
+
+# ========================
+# VS Code
+# ========================
+.vscode/
+
+# ========================
+# macOS
+# ========================
+.DS_Store
+
+# ========================
+# Eclipse (if using)
+# ========================
+.classpath
+.project
+.settings/
+bin/
+
+# ========================
+# NetBeans (just in case)
+# ========================
+nbproject/private/
+build/
+nbbuild/
+dist/
