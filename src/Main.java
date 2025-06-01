@@ -14,6 +14,14 @@ public class Main {
             7. close
          */
 
+        Class.forName("org.postgresql.Driver");
 
+        String url = "jdbc:postgresql://localhost:5432/demo";
+        String uname = "postgres";
+        String pass = "admin";
+
+        Connection con = DriverManager.getConnection(url, uname, pass);
+
+        System.out.println("Connection Established");
     }
 }
