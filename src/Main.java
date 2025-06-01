@@ -20,6 +20,7 @@ public class Main {
         String uname = "postgres";
         String pass = "admin";
 
+
         Connection con = DriverManager.getConnection(url, uname, pass);
 
         System.out.println("Connection Established");
