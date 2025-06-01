@@ -1,4 +1,7 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -19,10 +22,13 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/demo";
         String uname = "postgres";
         String pass = "admin";
+        String sql = "select sname from student where sid = 2";
 
 
         Connection con = DriverManager.getConnection(url, uname, pass);
-
         System.out.println("Connection Established");
+
+        Statement st = con.createStatement();
+
     }
 }
