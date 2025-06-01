@@ -23,6 +23,7 @@ public class Main {
         String uname = "postgres";
         String pass = "admin";
         String sql = "select sname from student where sid = 2";
+        String sname = "sname";
 
 
         Connection con = DriverManager.getConnection(url, uname, pass);
@@ -30,7 +31,9 @@ public class Main {
 
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(sql);
-        System.out.println(rs.next());
+        rs.next();
+        String name = rs.getString(sname);
+        System.out.println("Name of the student is: " + name);
 
         con.close();
         System.out.println("Connection Closed!");
