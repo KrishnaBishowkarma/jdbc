@@ -32,5 +32,8 @@ public class Main {
         ResultSet rs = st.executeQuery(sql);
         System.out.println(rs.next());
 
+        con.close();
+        System.out.println("Connection Closed!");
+
     }
 }
