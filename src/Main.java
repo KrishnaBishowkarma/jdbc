@@ -29,6 +29,7 @@ public class Main {
         System.out.println("Connection Established");
 
         Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery(sql);
 
     }
 }
