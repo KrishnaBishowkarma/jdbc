@@ -13,7 +13,7 @@ public class Main {
             3. create connection
             4. create statement
             5. execute statement
-            6. process
+            6. process the result
             7. close
          */
 
@@ -30,6 +30,7 @@ public class Main {
 
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(sql);
+        System.out.println(rs.next());
 
     }
 }
