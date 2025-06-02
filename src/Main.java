@@ -17,14 +17,16 @@ public class Main {
             7. close
          */
 
+        int sid = 101;
+        String sname = "Riyanshi";
+        int marks = 89;
+
         Class.forName("org.postgresql.Driver");
 
         String url = "jdbc:postgresql://localhost:5432/demo";
         String uname = "postgres";
         String pass = "admin";
-        String sql = "delete from student where sid=4";
-        String sname = "sname";
-
+        String sql = "insert into student values(" + sid + ", '" + sname + "' ," + marks + ")";
 
         Connection con = DriverManager.getConnection(url, uname, pass);
         System.out.println("Connection Established");
