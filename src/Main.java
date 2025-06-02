@@ -22,7 +22,7 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/demo";
         String uname = "postgres";
         String pass = "admin";
-        String sql = "select * from student";
+        String sql = "insert into student values(4, 'Naresh', 99)";
         String sname = "sname";
 
 
@@ -30,17 +30,7 @@ public class Main {
         System.out.println("Connection Established");
 
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery(sql);
-
-//        rs.next();
-//        String name = rs.getString(sname);
-//        System.out.println("Name of the student is: " + name);
-
-        while (rs.next()){
-            System.out.print(rs.getInt(1) + ", ");
-            System.out.print(rs.getString(2) + ", ");
-            System.out.println(rs.getInt(3));
-        }
+        st.execute(sql);
 
         con.close();
         System.out.println("Connection Closed!");
