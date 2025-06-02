@@ -22,7 +22,7 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/demo";
         String uname = "postgres";
         String pass = "admin";
-        String sql = "update student set sname='Naresh BK' where sid=4";
+        String sql = "delete from student where sid=4";
         String sname = "sname";
 
 
